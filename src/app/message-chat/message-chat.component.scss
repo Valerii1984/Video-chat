@@ -1,0 +1,99 @@
+.chat-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 85%;
+  width: 300px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px 0 0 10px;
+  box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 10;
+  display: flex;
+  flex-direction: column-reverse; /* Сообщения будут начинаться сверху */
+  justify-content: flex-start; /* Сообщения будут заполнять верхнюю часть */
+}
+
+.messages {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse; /* Сообщения добавляются сверху */
+  gap: 10px;
+  margin-bottom: 10px;
+  overflow-y: auto;
+  max-height: calc(100% - 120px); /* Оставляем место для ввода */
+  padding-right: 10px;
+  position: relative;
+}
+
+.message {
+  padding: 8px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.5s ease-out;
+  max-width: 80%; /* Ограничиваем ширину сообщений */
+  word-wrap: break-word;
+}
+
+/* Анимация для новых сообщений */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Начало сдвига сверху */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Конечная позиция */
+  }
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+}
+
+input {
+  width: 80%;
+  padding: 8px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+  .chat-container {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-container {
+    width: 200px;
+  }
+}

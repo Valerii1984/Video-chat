@@ -1,0 +1,25 @@
+<div class="video-chat">
+  <div class="video-container">
+    <!-- Основной экран для собеседника -->
+    <video #remoteVideo autoplay class="remote-video"></video>
+    <!-- Видео с вашей камеры -->
+    <video #localVideo autoplay muted class="local-video"></video>
+  </div>
+
+  <!-- Контролы -->
+  <div class="controls">
+    <button (click)="toggleCamera()">
+      {{ isCameraOn ? 'Выключить камеру' : 'Включить камеру' }}
+    </button>
+    <button (click)="toggleMicrophone()">
+      {{ isMicrophoneOn ? 'Выключить микрофон' : 'Включить микрофон' }}
+    </button>
+    <button (click)="shareScreen()">Поделиться экраном</button>
+    
+    <!-- Кнопка завершения вызова с красным фоном -->
+    <button class="end-call" (click)="endCall()">Завершить звонок</button>
+
+    <!-- Кнопка совершения вызова с зеленым фоном -->
+    <button class="start-call" (click)="startCall()">Совершить вызов</button>
+  </div>
+</div>

@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+/* styles.scss */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #00c6ff, #0072ff) !important; /* Градиент */
+    background-size: cover !important;
+    background-attachment: fixed !important; /* Закрепить фон */
+    min-height: 100vh; /* Обеспечиваем, чтобы фон всегда покрывал весь экран */
+    color: white; /* Белый цвет текста для контраста */
+  }
+  
