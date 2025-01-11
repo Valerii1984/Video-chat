@@ -1,7 +1,10 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-video-chat',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './video-chat.component.html',
   styleUrls: ['./video-chat.component.scss'],
 })

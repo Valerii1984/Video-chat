@@ -9,17 +9,25 @@
   <!-- Контролы -->
   <div class="controls">
     <button (click)="toggleCamera()">
-      {{ isCameraOn ? 'Выключить камеру' : 'Включить камеру' }}
+      <i class="fas" [ngClass]="isCameraOn ? 'fa-video' : 'fa-video-slash'"></i>
     </button>
+  
     <button (click)="toggleMicrophone()">
-      {{ isMicrophoneOn ? 'Выключить микрофон' : 'Включить микрофон' }}
+      <i class="fas" [ngClass]="isMicrophoneOn ? 'fa-microphone' : 'fa-microphone-slash'"></i>
     </button>
-    <button (click)="shareScreen()">Поделиться экраном</button>
+  
+    <button (click)="shareScreen()">
+      <i class="fas fa-desktop"></i>
+    </button>
     
     <!-- Кнопка завершения вызова с красным фоном -->
-    <button class="end-call" (click)="endCall()">Завершить звонок</button>
+    <button class="end-call" (click)="endCall()">
+      <i class="fas fa-phone-slash"></i>
+    </button>
 
     <!-- Кнопка совершения вызова с зеленым фоном -->
-    <button class="start-call" (click)="startCall()">Совершить вызов</button>
+    <button class="start-call" (click)="startCall()">
+      <i class="fas fa-phone"></i>
+    </button>
   </div>
 </div>

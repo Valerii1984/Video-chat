@@ -1,13 +1,19 @@
 .video-chat {
   position: relative;
-  width: 80%;  /* Устанавливаем ширину контейнера меньше, чем 100% */
-  max-width: 1000px;  /* Максимальная ширина */
-  height: 80vh;  /* Устанавливаем высоту контейнера */
-  background-color: black;
+  top: 2px;
+  width: 55%; /* Устанавливаем ширину контейнера меньше, чем 100% */
+  max-width: 1000px; /* Максимальная ширина */
+  height: 90vh; /* Устанавливаем высоту контейнера */
+  background-color: #536872;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto; /* Центрируем по горизонтали */
+  border: 5px solid transparent; /* Пространство для рамки */
+  border-radius: 15px 15px; /* Скругление углов */
+ /*  background: linear-gradient(45deg, #8557EB, #6E7F80);  Градиентная рамка */
+  padding: 5px; /* Расстояние между рамкой и видео */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Тень для эффекта объема */
 }
 
 .video-container {
@@ -20,6 +26,8 @@ video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px; /* Скругление видео */
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3); /* Внутренняя тень */
 }
 
 /* Удаленное видео */
@@ -52,7 +60,7 @@ button {
   border-radius: 5px;
   transition: background-color 0.3s ease;
   color: blue;
-  background-color: yellow;
+  background-color: gray;
   border: none;
   font-weight: bold;
 }
@@ -67,7 +75,7 @@ button.start-call {
 }
 
 button.start-call:hover {
-  background-color: green; /* Темнее зеленый */
+  background-color: darkgreen; /* Темнее зеленый */
 }
 
 /* Красная кнопка для завершения вызова */
@@ -76,5 +84,31 @@ button.end-call {
 }
 
 button.end-call:hover {
-  background-color: red; /* Темнее красный */
+  background-color: darkred; /* Темнее красный */
 }
+
+.controls button i {
+  font-size: 24px; /* Размер иконки */
+  color: white; /* Цвет */
+}
+
+.start-call i {
+  color: green;
+}
+
+.end-call i {
+  color: red;
+}
+
+.controls button:hover i {
+  opacity: 0.8;
+}
+.controls button i {
+  font-size: 24px; /* Размер иконок */
+  color: white; /* Цвет иконок */
+}
+
+.controls button:hover i {
+  color: #ccc; /* Изменение цвета при наведении */
+}
+
