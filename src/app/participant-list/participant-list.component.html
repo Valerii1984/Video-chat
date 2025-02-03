@@ -1,0 +1,32 @@
+<div class="participant-list">
+  <h3 class="title">Участники</h3>
+
+  <ul>
+    <li *ngFor="let participant of participants">
+      <div class="participant">
+        <div class="avatar">
+          <img src="https://via.placeholder.com/40" alt="Avatar" />
+        </div>
+        <div class="info">
+          <p class="name">{{ participant.name }}</p>
+          <p>Микрофон: {{ participant.microphoneOn ? 'Включен' : 'Выключен' }}</p>
+          <p>Камера: {{ participant.cameraOn ? 'Включена' : 'Выключена' }}</p>
+        </div>
+        <div class="controls">
+          <button 
+            [ngClass]="{'mic-on': participant.microphoneOn, 'mic-off': !participant.microphoneOn}" 
+            (click)="toggleMicrophone(participant.id)">
+            {{ participant.microphoneOn ? 'Выключить микрофон' : 'Включить микрофон' }}
+          </button>
+          <button 
+            [ngClass]="{'cam-on': participant.cameraOn, 'cam-off': !participant.cameraOn}" 
+            (click)="toggleCamera(participant.id)">
+            {{ participant.cameraOn ? 'Выключить камеру' : 'Включить камеру' }}
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <button class="invite-button" (click)="inviteParticipant()">Пригласить участника</button>
+</div>

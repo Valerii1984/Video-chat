@@ -1,0 +1,120 @@
+.participants-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.participant {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #333;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.avatar {
+  margin-right: 15px;
+}
+
+.avatar img {
+  border-radius: 50%;
+}
+
+.info {
+  flex-grow: 1;
+}
+
+.controls button {
+  margin-right: 10px;
+  padding: 8px 15px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button.mic-on {
+  background-color: #4caf50; /* Зеленый для включенного микрофона */
+}
+
+button.mic-on:hover {
+  background-color: #45a049;
+}
+
+button.mic-off {
+  background-color: #f44336; /* Красный для выключенного микрофона */
+}
+
+button.mic-off:hover {
+  background-color: #e53935;
+}
+
+button.cam-on {
+  background-color: #4caf50; /* Зеленый для включенной камеры */
+}
+
+button.cam-on:hover {
+  background-color: #45a049;
+}
+
+button.cam-off {
+  background-color: #f44336; /* Красный для выключенной камеры */
+}
+
+button.cam-off:hover {
+  background-color: #e53935;
+}
+
+/* Выделение имени участника */
+.name {
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px;
+  font-size: 1em; /* Размер шрифта не изменяется */
+}
+
+/* Стили для заголовка и кнопки "Пригласить участника" */
+.title {
+  text-align: center; /* Выравнивание заголовка по центру */
+  color: #ffffff;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.invite-button {
+  background-color: #4caf50; /* Зеленый цвет кнопки */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.invite-button:hover {
+  background-color: #45a049;
+}
+
+/* Медиа-запросы для адаптации */
+@media (max-width: 768px) {
+  .participants-wrapper {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .participants-wrapper {
+    width: 200px;
+  }
+}

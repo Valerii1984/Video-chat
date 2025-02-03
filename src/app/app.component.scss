@@ -1,15 +1,36 @@
 .app-container {
   display: flex;
+  justify-content: space-between;  /* Центрируем все блоки по горизонтали с равными отступами */
+  align-items: stretch;           /* Все блоки растягиваются по высоте */
+  width: 100%;
+  height: 90vh;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+app-message-chat, app-video-chat, app-participant-list {
+  height: 100%; /* Все блоки растягиваются по высоте */
+  display: flex;
   flex-direction: column;
-  height: 100vh;
-  
+}
 
-  app-video-chat {
-    flex: 2;
-  }
+app-message-chat {
+  width: 20%;
+  max-width: 300px;
+  order: 1; /* Блок сообщений */
+}
 
-  app-message-chat {
-    flex: 1;
-    overflow-y: auto;
-  }
+app-video-chat {
+  width: 55%; /* Ширина видеочата */
+  max-width: 1000px; /* Максимальная ширина видеочата */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 2; /* Видеочат по центру */
+}
+
+app-participant-list {
+  width: 20%;
+  max-width: 300px;
+  order: 3; /* Участники после видеочата */
 }
